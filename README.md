@@ -21,7 +21,7 @@
 
 - fork本项目
 - 在自己的repo下Settings/Secrets中设置USERNAME和PASSWORD，分别为学号和密码
-- fork的项目会默认关闭actions，需手动点击repo页的[actions](./actions)以enable
+- fork的项目会默认关闭actions，需手动点击repo页的actions以enable
 
 
 ### local run
@@ -53,3 +53,11 @@ simso登录成功
 ```
 两个`提交成功`分别为出校和入校备案成功，如果日志不同则可能失败，请在issue中反馈；后续也可能会添加debug信息和错误处理
 
+## TODO
+
+热烈欢迎pr！！
+
+
+- [ ] error handling
+- [ ] code structure refactor
+- [ ] unit test
