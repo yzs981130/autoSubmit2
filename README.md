@@ -37,12 +37,34 @@ go build
 ```
 
 #### run
+
+##### 环境变量方法设置参数
 - 环境变量`USERNAME`：学号
 - 环境变量`PASSWORD`：密码
 
 ```shell script
 USERNAME=xxx PASSWORD=xxx ./autosubmit
 ```
+
+##### 命令行传参设置
+```shell script
+$ ./autosubmit -h
+Usage of ./autosubmit:
+  -password string
+    	portal密码
+  -reason string
+    	出入校事由 (default "西市买鞍鞯")
+  -track string
+    	出校行动轨迹 (default "北大西门-畅春园-北大西门")
+  -username string
+    	学号
+```
+
+```shell script
+./autosubmit -username=1900012345 -password=dashabi -reason "玩" -track "康博斯-CBD-公主楼"
+```
+
+注意环境变量只能传
 
 如果成功，会显示如下log：
 ```shell script
