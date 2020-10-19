@@ -31,4 +31,5 @@ jobs:
       env:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
+        FT_SCKEY: ${{ secrets.FT_SCKEY }}
       run: ./autosubmit
