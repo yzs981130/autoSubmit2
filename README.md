@@ -21,6 +21,7 @@
 
 - fork本项目
 - 在自己的repo下Settings/Secrets中设置USERNAME和PASSWORD，分别为学号和密码
+- 【可选】如果需要微信通知，可以配置FT_SCKEY，为[ftqq微信推送服务](http://sc.ftqq.com/?c=code)中的SCKEY
 - fork的项目会默认关闭actions，需手动点击repo页的actions以enable
 
 
@@ -41,10 +42,12 @@ go build
 ##### 环境变量方法设置参数
 - 环境变量`USERNAME`：学号
 - 环境变量`PASSWORD`：密码
+- 环境变量`FT_SCKEY`：SCKEY
 
 ```shell script
-USERNAME=xxx PASSWORD=xxx ./autosubmit
+USERNAME=xxx PASSWORD=xxx FT_SCKEY=xxxxxxxxx ./autosubmit
 ```
+其中`FT_SCKEY`配置可选，配置会有
 
 ##### 命令行传参设置
 ```shell script
@@ -70,10 +73,12 @@ Usage of ./autosubmit:
 ```shell script
 portal登录成功
 simso登录成功
-提交成功
-提交成功
+出校备案成功
+微信通知发送成功
+入校备案成功
+微信通知发送成功
 ```
-两个`提交成功`分别为出校和入校备案成功，如果日志不同则可能失败，请在issue中反馈；后续也可能会添加debug信息和错误处理
+如果未配置`FT_SCKEY`则无`微信通知发送成功`字样，与上述log不同则可能失败，请在issue中反馈；后续也可能会添加debug信息和错误处理
 
 ## TODO
 
