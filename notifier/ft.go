@@ -34,6 +34,6 @@ func Ft(key string, title string, username string) {
 	if r.Errno == 0 && r.Errmsg == "success" {
 		fmt.Println("微信通知发送成功")
 	} else {
-		fmt.Println("微信通知发送失败" + r.Errmsg)
+		fmt.Println("微信通知发送失败：" + r.Errmsg)
 	}
 }
